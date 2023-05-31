@@ -1,6 +1,6 @@
 body {
     
-    height: 2000px;
+    height: 3000px;
     width: 1200px;
     margin: auto;
 }
@@ -79,4 +79,13 @@ body {
     position: relative; top: 200px;
     text-align: center;
     display: none;
+}
+
+.active{
+    position: relative; top: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+#active{
+    font-size: 20px;
 }

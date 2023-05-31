@@ -129,3 +129,22 @@ $('#rev').click(() => {
         images.eq(index).fadeIn();
     });
 });
+
+$(document).ready(function() {
+    // ジェンダー選択の変更イベント
+    $('#active').change(function() {
+        var selectedGender = $(this).val();
+    
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+        
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+        $('#active option:eq(' + (index + 1) + ')').text(optionText);
+        });
+    });
+});
