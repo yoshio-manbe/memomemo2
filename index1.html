@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <p class="title">シフト調整</p>
@@ -46,8 +47,20 @@
     <div id="map"></div>
 
     <div id="content-container"></div>
+
+    <div id="slideshow-container">
+        <img src="/images/building1.jpeg" alt="">
+        <img src="/images/building2.jpeg" alt="">
+        <img src="/images/building3.jpeg" alt="">
+    </div>
+
+    <div class="sub">
+        <button id="rev">前へ</button>
+        <button id="next">次へ</button>
+    </div>
+
     
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <script src="js/script1.js"></script>
 </body>
 </html>

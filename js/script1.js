@@ -104,3 +104,28 @@ $(document).ready(function() {
     }
     }).addTo(map);
 });
+
+$(document).on('click', '#y-m-button, #y-a-button, #y-n-button, #y-z-button', function() {
+    $("#slideshow-container").show();
+    $(".sub").show();
+});
+
+const images = $('#slideshow-container img');
+let counter = 0;
+let index = 0;
+
+images.eq(index).fadeIn();
+
+$('#next').click(() => {
+    images.eq(index).fadeOut(() => {
+        index = (index + 1) % images.length;
+        images.eq(index).fadeIn();
+    });
+});
+
+$('#rev').click(() => {
+    images.eq(index).fadeOut(() => {
+        index = (index - 1 + images.length) % images.length;
+        images.eq(index).fadeIn();
+    });
+});

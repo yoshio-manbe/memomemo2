@@ -10,6 +10,7 @@ body {
     background-color: bisque;
     width: 300px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 #map {
@@ -53,9 +54,29 @@ body {
 }
 
 #y-m-button, #y-a-button, #y-z-button, #y-n-button {
-    position: relative; 
+    position: relative;
+    display: block;
     top: 150px;
-    margin: 0 auto;
     font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange;
+}
+
+#slideshow-container{
+    position: relative; top: 200px;
+    display: none;
     text-align: center;
+}
+#slideshow-container img{
+    width: 500px;
+    margin: auto;
+    height: 300px;
+    display: none;
+}
+
+.sub{
+    position: relative; top: 200px;
+    text-align: center;
+    display: none;
 }
