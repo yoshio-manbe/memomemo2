@@ -20,9 +20,10 @@ $(document).ready(function() {
         if (storedData) {
         $("#member" + i).val(storedData.name);
         $("#memo" + i).val(storedData.memo);
-    }
+        }
     }
 })
+
 
 var map = L.map('map').setView([43.074954, 141.314049], 16);
 
@@ -108,6 +109,7 @@ $(document).ready(function() {
 $(document).on('click', '#y-m-button, #y-a-button, #y-n-button, #y-z-button', function() {
     $("#slideshow-container").show();
     $(".sub").show();
+    $("#active").show();
 });
 
 const images = $('#slideshow-container img');
@@ -130,21 +132,147 @@ $('#rev').click(() => {
     });
 });
 
-$(document).ready(function() {
-    // ジェンダー選択の変更イベント
-    $('#active').change(function() {
+$("#active").ready(function() {
+    // 選択の変更イベント
+    $('.m1').change(function() {
         var selectedGender = $(this).val();
-    
         // メンバー名と備考欄の値を取得し、選択肢に反映させる
         $('ol li').each(function(index) {
             var memberId = '#member' + (index + 1);
             var memoId = '#memo' + (index + 1);
             var memberName = $(memberId).val();
             var memoText = $(memoId).val();
-        
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-        $('#active option:eq(' + (index + 1) + ')').text(optionText);
+            console.log(optionText)
+            $(".m1 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.m2').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".m2 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.t1').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".t1 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.t2').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".t2 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.w1').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".w1 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.w2').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".w2 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.tr1').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".tr1 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.tr2').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".tr2 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.f1').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".f1 option:eq(" + (index + 1) + ")").text(optionText);
+        });
+    });
+    $('.f2').change(function() {
+        var selectedGender = $(this).val();
+        // メンバー名と備考欄の値を取得し、選択肢に反映させる
+        $('ol li').each(function(index) {
+            var memberId = '#member' + (index + 1);
+            var memoId = '#memo' + (index + 1);
+            var memberName = $(memberId).val();
+            var memoText = $(memoId).val();
+            // 選択肢に反映させる
+            var optionText = memberName + ' - ' + memoText;
+            console.log(optionText)
+            $(".f2 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
 });
+
