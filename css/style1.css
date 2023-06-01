@@ -65,14 +65,12 @@ body {
 
 #slideshow-container{
     position: relative; top: 200px;
-    display: none;
     text-align: center;
 }
 #slideshow-container img{
     width: 500px;
     margin: auto;
     height: 300px;
-    display: none;
 }
 
 .sub{

@@ -106,13 +106,14 @@ $(document).ready(function() {
     }).addTo(map);
 });
 
-$(document).on('click', '#y-m-button, #y-a-button, #y-n-button, #y-z-button', function() {
-    $("#slideshow-container").show();
+$(document).on('click', '#y-m-button', function() {
+    $("#slideshow-container").append("<img src='/images/building1.jpeg' alt='画像'>","<img src='/images/building2.jpeg' alt='画像'>")
+    
     $(".sub").show();
     $("#active").show();
 });
 
-const images = $('#slideshow-container img');
+const images = $('#slideshow-container');
 let counter = 0;
 let index = 0;
 
