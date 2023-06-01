@@ -70,11 +70,12 @@ body {
 #slideshow-container img{
     width: 500px;
     margin: auto;
-    height: 300px;
+    height: 310px;
+    display: none;
 }
 
 .sub{
-    position: relative; top: 200px;
+    position: relative; top: 210px;
     text-align: center;
     display: none;
 }

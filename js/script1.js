@@ -107,31 +107,117 @@ $(document).ready(function() {
 });
 
 $(document).on('click', '#y-m-button', function() {
-    $("#slideshow-container").append("<img src='/images/building1.jpeg' alt='画像'>","<img src='/images/building2.jpeg' alt='画像'>")
+    $("#slideshow-container").empty();
+    $("#slideshow-container").append("<img src='/images/building1.jpeg' alt='画像'><img src='/images/building2.jpeg' alt='画像'>")
     
     $(".sub").show();
     $("#active").show();
-});
 
-const images = $('#slideshow-container');
-let counter = 0;
-let index = 0;
+    const images = $("#slideshow-container img");
+    let counter = 0;
+    let index = 0;
 
-images.eq(index).fadeIn();
+    images.eq(index).css('display', 'block');
 
-$('#next').click(() => {
-    images.eq(index).fadeOut(() => {
-        index = (index + 1) % images.length;
-        images.eq(index).fadeIn();
+    $('#next').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index + 1) % images.length;
+            images.eq(index).fadeIn();
+        });
+    });
+
+    $('#rev').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index - 1 + images.length) % images.length;
+            images.eq(index).fadeIn();
+        });
+    });
+    });
+
+$(document).on('click', '#y-a-button', function() {
+    $("#slideshow-container").empty();
+    $("#slideshow-container").append("<img src='/images/building3.jpeg' alt='画像'><img src='/images/building4.jpeg' alt='画像'>")
+    
+    $(".sub").show();
+    $("#active").show();
+    
+    const images = $("#slideshow-container img");
+    let counter = 0;
+    let index = 0;
+    
+    images.eq(index).css('display','block');
+    
+    $('#next').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index + 1) % images.length;
+            images.eq(index).fadeIn();
+        });
+    });
+    
+    $('#rev').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index - 1 + images.length) % images.length;
+            images.eq(index).fadeIn();
+        });
     });
 });
 
-$('#rev').click(() => {
-    images.eq(index).fadeOut(() => {
-        index = (index - 1 + images.length) % images.length;
-        images.eq(index).fadeIn();
+$(document).on('click', '#y-z-button', function() {
+    $("#slideshow-container").empty();
+    $("#slideshow-container").append("<img src='/images/building5.jpeg' alt='画像'><img src='/images/building6.jpeg' alt='画像'>")
+    
+    $(".sub").show();
+    $("#active").show();
+    
+    const images = $("#slideshow-container img");
+    let counter = 0;
+    let index = 0;
+    
+    images.eq(index).css('display','block');
+    
+    $('#next').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index + 1) % images.length;
+            images.eq(index).fadeIn();
+        });
+    });
+    
+    $('#rev').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index - 1 + images.length) % images.length;
+            images.eq(index).fadeIn();
+        });
     });
 });
+
+$(document).on('click', '#y-n-button', function() {
+    $("#slideshow-container").empty();
+    $("#slideshow-container").append("<img src='/images/building8.jpeg' alt='画像'><img src='/images/building7.jpeg' alt='画像'>")
+    
+    $(".sub").show();
+    $("#active").show();
+    
+    const images = $("#slideshow-container img");
+    let counter = 0;
+    let index = 0;
+    
+    images.eq(index).css('display','block');
+    
+    $('#next').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index + 1) % images.length;
+            images.eq(index).fadeIn();
+        });
+    });
+    
+    $('#rev').click(() => {
+        images.eq(index).fadeOut(() => {
+            index = (index - 1 + images.length) % images.length;
+            images.eq(index).fadeIn();
+        });
+    });
+});
+
 
 $("#active").ready(function() {
     // 選択の変更イベント
@@ -145,7 +231,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".m1 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -159,7 +245,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".m2 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -173,7 +259,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".t1 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -187,7 +273,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".t2 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -201,7 +287,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".w1 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -215,7 +301,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".w2 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -229,7 +315,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".tr1 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -243,7 +329,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".tr2 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -257,7 +343,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".f1 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
@@ -271,7 +357,7 @@ $("#active").ready(function() {
             var memoText = $(memoId).val();
             // 選択肢に反映させる
             var optionText = memberName + ' - ' + memoText;
-            console.log(optionText)
+
             $(".f2 option:eq(" + (index + 1) + ")").text(optionText);
         });
     });
